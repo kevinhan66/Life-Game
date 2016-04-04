@@ -7,18 +7,20 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # End Scenario. For testing, most will go here
+
 s0 = Scenario.create(story: "Oh no! I giant dragon took you away & no has heard of you since :(",
                      choice_1: 11, choice_2: 11, choice_3: 11)
 
 s1 = Scenario.create(story: "You get caught in the hallway by the principal when you have to be at lunch", 
-                     choice_1: 1, choice_2: 2, choice_3: 3)
+                     choice_1: 1+1, choice_2: 2+1, choice_3: 3+1)
 s2 = Scenario.create(story: "He saw right through you. You have dentetion! What now?!", 
-                     choice_1: 4, choice_2: 5, choice_3: 6)
+                     choice_1: 4+1, choice_2: 5+1, choice_3: 6+1)
 s3 = Scenario.create(story: "Sweet, you got out. Let's go party?!", 
-                     choice_1: 7, choice_2: 8, choice_3: 9)
+                     choice_1: 7+1, choice_2: 8+1, choice_3: 9+1)
 s4 = Scenario.create(story: "Yes, I random dragon attacked but you slayed. You are a hero", 
-                     choice_1: 10, choice_2: 10, choice_3: 10)
+                     choice_1: 10+1, choice_2: 10+1, choice_3: 10+1)
                      
+Choice.create(option: "You use the fake pass you been given & explain the situation", scenario_id: s0.id)                     
 Choice.create(option: "You use the fake pass you been given & explain the situation", scenario_id: s0.id)
 Choice.create(option: "You show him you have to deliver the books to a teacher", scenario_id: s2.id)
 Choice.create(option: "You come clean & apologize for being in the halls", scenario_id: s0.id)
@@ -38,5 +40,6 @@ Choice.create(option: "Yas!", scenario_id: s4.id)
 
 # End Choice. For testing, most will go here
 Choice.create(option: "RIP", scenario_id: s0.id)
+
 
 
