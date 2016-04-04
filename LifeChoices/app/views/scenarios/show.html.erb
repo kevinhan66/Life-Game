@@ -1,3 +1,4 @@
+<!-- <<<<<<< HEAD
 
 <div class = "choices">
 	<textarea rows="4" cols="50" class = "story">
@@ -12,3 +13,17 @@ This is where the current story and scenarios will be posted
 			<br></br>	 
 </div>
 	<%= button_to "Save Progress",scenarios_path(1), :class=>"saveButton"%>
+======= -->
+
+
+<div>
+    <h2 class = "choices"><%= @scenario.story %></h2>
+    <div class = "choices">
+        <% @choices.each do |c| %>
+            <%= button_to c.option, scenario_path(c.scenario_id), :method => :get, :class=>"choiceButton" %>
+            <br></br>
+        <% end %>
+    </div>
+    <%= button_to "Save Progress",scenarios_path(1), :class=>"saveButton"%>  
+</div>
+<!-- >>>>>>> origin/Prototype -->

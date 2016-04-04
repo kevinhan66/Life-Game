@@ -4,11 +4,12 @@
 	<h1 font-family="Arial"> Life Choices!!!</h1>
 
 	    	
-	    <%= button_to "Continue Story", scenario_path(1), :class=>"buttons" %>
+	    <%= button_to "Continue Story", scenario_path(2),:method =>:get, :class=>"buttons" %>
 		<br></br>	    		
 
-	    <%= button_to "New Story", scenario_path(1), :class =>"buttons" %></div>
+	    <%= button_to "New Story", scenario_path(Scenario.root_scenario), :methode =>:get, :class =>"buttons" %></div>
 </div>
+
 
 
 
