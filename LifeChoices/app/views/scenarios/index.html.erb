@@ -1,6 +1,12 @@
 <h1> Life Choices!!!</h1>
 
 <div>
-    <%= button_to "Continue!!!", scenario_path(1) %>
-    <%= button_to "New Story!!!", scenario_path(1) %>
+    <%= button_to "Continue!!!", scenario_path(2), :method => :get %>
+    <br>
+    <%= button_to "New Story!!!", scenario_path(Scenario.root_scenario), :method => :get %>
+    
+    <% @scenarios.each do |s| %>
+        <h2><%= s.story %></h2>
+        <%= button_to "!!!", scenario_path(s), :method => :get %>
+    <% end %>
 </div>

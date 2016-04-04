@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
   
-  resources :scenarios
-  
   root 'scenarios#index'
+  
+  #resources :scenarios
+ 
+  #get '/scenarios/:id' => 'scenarios#show' #, as: :scenario
+  
+  get '/scenarios' => 'scenarios#index'
+  get '/scenarios/:id' => 'scenarios#show', as: :scenario
+  
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
