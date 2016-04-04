@@ -13,3 +13,95 @@
  *= require_tree .
  *= require_self
  */
+
+.start {
+    text-align: center;
+}
+.choices {
+	padding-top: 2cm;
+    text-align: center;
+}
+.buttons {
+	background-color:#456ac7;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #1926ab;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2a4fe0;
+}
+.buttons:hover {
+	background-color:#332abd;
+}
+.buttons:active {
+	position:relative;
+	top:1px;
+}
+
+.choiceButton {
+	background-color:#456ac7;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #1926ab;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 76px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2a4fe0;
+}
+.choiceButton:hover {
+	background-color:#332abd;
+}
+.choiceButton:active {
+	position:relative;
+	top:1px;
+}
+
+.saveButton {
+	background-color:#456ac7;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #1926ab;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 76px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2a4fe0;
+}
+.saveButton:hover {
+	background-color:#332abd;
+}
+.saveButton:active {
+	position:relative;
+	top:1px;
+}
+
+.story
+{ 
+background:#F0EDED;
+color:#54556E;
+border:1px solid #2320E3;
+border-radius:2px ;
+font-size:16px ;
+width: 300px ;
+padding: 10px ;
+box-shadow: 0px 0px 8px #1E21B3; 
+-webkit-box-shadow: 0px 0px 8px #1E21B3; 
+-moz-box-shadow: 0px 0px 8px #1E21B3; 
+}
+
+

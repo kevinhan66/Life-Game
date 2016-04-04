@@ -8,6 +8,7 @@ class ScenariosController < ApplicationController
         id = params[:id]
         @scenario = Scenario.find(id)
     end
+    
 
 end
 
