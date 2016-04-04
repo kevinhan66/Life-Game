@@ -5,8 +5,11 @@
     <br>
     <%= button_to "New Story!!!", scenario_path(Scenario.root_scenario), :method => :get %>
     
-    <% @scenarios.each do |s| %>
+</div>
+
+<!--
+<% @scenarios.each do |s| %>
         <h2><%= s.story %></h2>
         <%= button_to "!!!", scenario_path(s), :method => :get %>
     <% end %>
-</div>
+-->
