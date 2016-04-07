@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :scenarios
   get 'scenarios' => 'scenarios#show'
   get '/' => 'scenarios#index'
+  post 'save_game'=>'scenarios#save_game'
+  get 'continue_game' =>'scenarios#continue_game'
 # =======
 # >>>>>>> origin/Prototype
   # root 'scenarios#index'

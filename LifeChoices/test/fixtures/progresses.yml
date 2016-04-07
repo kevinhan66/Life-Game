@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  progress: MyString
+  savedprogress: MyString
+
+two:
+  progress: MyString
+  savedprogress: MyString

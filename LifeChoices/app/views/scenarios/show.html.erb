@@ -23,7 +23,10 @@ This is where the current story and scenarios will be posted
             <%= button_to c.option, scenario_path(c.scenario_id), :method => :get, :class=>"choiceButton" %>
             <br></br>
         <% end %>
+        <br></br>
+	    <br></br>
+	    <%= button_to "Save Progress",save_game_path, :class=>"choiceButton"%> 
     </div>
-    <%= button_to "Save Progress",scenarios_path(1), :class=>"saveButton"%>  
+     
 </div>
 <!-- >>>>>>> origin/Prototype -->
