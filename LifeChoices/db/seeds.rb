@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # End Scenario. For testing, most will go here
-scenarios = [{:story => 'Oh no! I giant dragon took you away & no has heard of you since :(', 
+scenarios = [{:id=> 1, :story => 'Oh no! I giant dragon took you away & no has heard of you since :(', 
               :choice_1=> 11, :choice_2 =>11, :choice_3=>11},
               {:story => 'You get caught in the hallway by the principal when you have to be at lunch', 
               :choice_1=> nil, :choice_2 =>3, :choice_3=>4},
@@ -18,7 +18,7 @@ scenarios = [{:story => 'Oh no! I giant dragon took you away & no has heard of y
               {:story => 'Yes, I random dragon attacked but you slayed. You are a hero', 
               :choice_1=> 11, :choice_2 =>11, :choice_3=>11}
       ]
- choices= [{:option=>'You use the fake pass you been given & explain the situation', :scenario_id=> 1},
+ choices= [{:id=>1, :option=>'You use the fake pass you been given & explain the situation', :scenario_id=> 1},
    {:option=>'You use the fake pass you been given & explain the situation', :scenario_id=> 1},
    {:option=>'You show him you have to deliver the books to a teacher', :scenario_id=> 3},
    {:option=>'You come clean & apologize for being in the halls', :scenario_id=> 1},
