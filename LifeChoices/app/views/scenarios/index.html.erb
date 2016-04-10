@@ -3,9 +3,10 @@
 <div class="start">
 	<h1 font-family="Arial"> YOU </h1>
 
-	    	
-	    <%= button_to "Continue Story", continue_game_path,:method =>:get, :class=>"buttons" %>
-		<br></br>	    		
+	    <%if !@progress.empty?%>	
+	    	<%= button_to "Continue Story", continue_game_path,:method =>:get, :class=>"buttons" %>
+			<br></br>
+		<%end%>	    		
 
 	    <%= button_to "New Story", scenario_path(2), :method =>:get, :class =>"buttons" %>
 </div>

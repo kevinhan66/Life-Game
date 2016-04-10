@@ -2,6 +2,7 @@ class ScenariosController < ApplicationController
 
     def index 
         @scenarios = Scenario.all
+        @progress = Progress.all 
     end
     
     def show
@@ -11,16 +12,22 @@ class ScenariosController < ApplicationController
         choice_ids = [@scenario.choice_1, @scenario.choice_2, @scenario.choice_3]
         @choices = []
         choice_ids.each do |choice_id|
+          if choice_id != nil
             @choices.push(Choice.find(choice_id))
+          end   
         end
     end
     
     def continue_game
-      @progress = Progress.order("created_at").last
-      if(@progress!=nil)
-        id = @progress.scenario_id.to_s
-        redirect_to scenario_path(id)
-      end
+      if Progress.all.empty?
+        redirect_to '/'
+     else
+        @progress = Progress.order("created_at").last
+        if @progress!=nil
+          id = @progress.scenario_id.to_s
+          redirect_to scenario_path(id)
+        end
+     end
     end
     
     def save_game

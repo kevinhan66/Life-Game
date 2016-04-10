@@ -10,7 +10,7 @@
 scenarios = [{:story => 'Oh no! I giant dragon took you away & no has heard of you since :(', 
               :choice_1=> 11, :choice_2 =>11, :choice_3=>11},
               {:story => 'You get caught in the hallway by the principal when you have to be at lunch', 
-              :choice_1=> 2, :choice_2 =>3, :choice_3=>4},
+              :choice_1=> nil, :choice_2 =>3, :choice_3=>4},
               {:story => 'He saw right through you. You have dentetion! What now?!', 
               :choice_1=> 5, :choice_2 =>6, :choice_3=>7},
               {:story => 'Sweet, you got out. Let\'s go party!?', 
