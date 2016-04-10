@@ -17,8 +17,10 @@ class ScenariosController < ApplicationController
     
     def continue_game
       @progress = Progress.order("created_at").last
-      id = @progress.scenario_id.to_s
-      redirect_to scenario_path(id)
+      if(@progress!=nil)
+        id = @progress.scenario_id.to_s
+        redirect_to scenario_path(id)
+      end
     end
     
     def save_game
