@@ -22,10 +22,12 @@ class ScenariosController < ApplicationController
       if Progress.all.empty?
         redirect_to '/'
      else
-        @progress = Progress.order("created_at").last
+        @progress = Progress.find_by_user(session[:user])
         if @progress!=nil
           id = @progress.scenario_id.to_s
           redirect_to scenario_path(id)
+        else
+          redirect_to scenario_path(1)
         end
      end
     end
