@@ -34,9 +34,10 @@ class ScenariosController < ApplicationController
     
     def save_game
       
-      progress = Progress.find_by_user(session[:user]).id
+      progress = Progress.find_by_user(session[:user])
+
       if progress !=nil
-        Progress.update(progress,:scenario_id=>session[:scenario_id])
+        Progress.update(progress.id,:scenario_id=>session[:scenario_id])
       else
         Progress.create!(:scenario_id=>session[:scenario_id],:user=>session[:user])
       end 
