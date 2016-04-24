@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'sessions/new'
+
+  get 'users/new'
+
 # <<<<<<< HEAD
   resources :scenarios
   get 'scenarios' => 'scenarios#show'
@@ -8,6 +12,13 @@ Rails.application.routes.draw do
   get 'continue_game' =>'scenarios#continue_game'
 # =======
 # >>>>>>> origin/Prototype
+
+  get 'signup' => 'users#new'
+  resources :users
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+
+  delete 'logout' => 'sessions#destroy'
   # root 'scenarios#index'
 #   
   # #resources :scenarios
