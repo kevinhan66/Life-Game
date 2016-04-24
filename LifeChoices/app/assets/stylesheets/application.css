@@ -14,6 +14,10 @@
  *= require_self
  */
 
+body {
+	background: url('/assets/light_gray_background.jpg');
+}
+
 h2{
 	font-family: Arial;
 }
