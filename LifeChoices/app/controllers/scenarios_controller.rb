@@ -20,7 +20,7 @@ class ScenariosController < ApplicationController
     
     def continue_game
       if Progress.all.empty?
-        redirect_to '/'
+        redirect_to '/home'
      else
         @progress = Progress.find_by_user(session[:user])
         if @progress!=nil
@@ -33,8 +33,14 @@ class ScenariosController < ApplicationController
     end
     
     def save_game
-      Progress.create!(:scenario_id =>session[:scenario_id])
-      redirect_to '/'
+      
+      progress = Progress.find_by_user(session[:user]).id
+      if progress !=nil
+        Progress.update(progress,:scenario_id=>session[:scenario_id])
+      else
+        Progress.create!(:scenario_id=>session[:scenario_id],:user=>session[:user])
+      end 
+      redirect_to '/home'
     end
 
 end

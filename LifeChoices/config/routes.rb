@@ -4,19 +4,17 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
-# <<<<<<< HEAD
   resources :scenarios
   get 'scenarios' => 'scenarios#show'
-  get '/' => 'scenarios#index'
+  get '/home' => 'scenarios#index'
   post 'save_game'=>'scenarios#save_game'
   get 'continue_game' =>'scenarios#continue_game'
-# =======
-# >>>>>>> origin/Prototype
 
   get 'signup' => 'users#new'
+  
   resources :users
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+  get '/' => 'sessions#new'
+  post '/' => 'sessions#create'
 
   delete 'logout' => 'sessions#destroy'
   # root 'scenarios#index'

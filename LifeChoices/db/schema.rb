@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20160424180244) do
 
   create_table "choices", force: :cascade do |t|
@@ -23,8 +22,8 @@ ActiveRecord::Schema.define(version: 20160424180244) do
 
   create_table "progresses", force: :cascade do |t|
     t.integer  "scenario_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "user"
   end
 
@@ -38,13 +37,10 @@ ActiveRecord::Schema.define(version: 20160424180244) do
   end
 
   create_table "users", force: :cascade do |t|
-<<<<<<< HEAD
-=======
     t.string   "username"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
->>>>>>> origin/master
   end
 
 end
