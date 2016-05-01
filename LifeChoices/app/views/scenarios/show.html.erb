@@ -1,6 +1,11 @@
 
 <div>
-    <h2 class = "choices"><%= @scenario.story %></h2>
+    <div id="scene"><h2 class = "choices"><%= @scenario.story %></h2></div>
+    <script type="text/javascript">
+    
+		new TypingText(document.getElementById("scene"), 50, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+		TypingText.runAll();
+	</script>
     <div class = "choices">
         <% @choices.each do |c| %>
             <%= button_to c.option, scenario_path(c.scenario_id), :method => :get, :class=>"choiceButton" %>

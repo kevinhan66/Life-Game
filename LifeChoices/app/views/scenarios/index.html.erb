@@ -1,7 +1,13 @@
 
 
 <div class="start">
-	<h1 font-family="Arial"> YOU </h1>
+	<div id="YOU"><h1>YOU</h1></div>
+	<script type="text/javascript">
+		new TypingText(document.getElementById("YOU"), 500, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+
+		//Type out examples:
+		TypingText.runAll();
+	</script>
 
 	    <%if !@progress.empty?%>	
 	    	<%= button_to "Continue Story", continue_game_path,:method =>:get, :class=>"buttons" %>
