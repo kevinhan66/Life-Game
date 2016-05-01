@@ -1,11 +1,14 @@
 
 <div align="center">
-    <h1>Sign up</h1>
-
+    <div  id="signup"><h1>Sign Up</h1></div>
+	<script type="text/javascript">
+			new TypingText(document.getElementById("signup"), 200, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+			TypingText.runAll();
+	</script>
     <%= form_for(@user) do |f| %>
       <%= f.text_field :username, :placeholder => "Username", class:"inputbox" %>
       <%= f.password_field :password, :placeholder => "Password",class:"inputbox" %>
       <p><%= f.submit "Create an account", class: "buttons" %></p>
     <% end %>
 
-    </div>
+</div>

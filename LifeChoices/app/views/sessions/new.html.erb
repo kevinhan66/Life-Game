@@ -1,5 +1,11 @@
 
-<h1 align="center">Log In</h1>
+<div id="login"><h1 align="center">Log In</h1></div>
+<script type="text/javascript">
+		new TypingText(document.getElementById("login"), 200, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+
+		//Type out examples:
+		TypingText.runAll();
+	</script>
 <div align="center">
 <%= form_for(:session, url: '/') do |f| %>
     <%= f.text_field :username, :placeholder => "Username",class:"inputbox" %>
